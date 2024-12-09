@@ -1,0 +1,1 @@
+export * as goodsActions from './goods';

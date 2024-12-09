@@ -6,7 +6,7 @@ type Action = AddAction | TakeAction | ClearAction;
 
 const add = (good: string): AddAction => ({ type: 'goods/ADD', payload: good });
 const take = (good: string): TakeAction => ({ type: 'goods/TAKE', payload: good });
-const clear = ( ): ClearAction => ({ type: 'goods/CLEAR' });
+const clear = (): ClearAction => ({ type: 'goods/CLEAR' });
 
 export const actions = { add, take, clear };
 
@@ -18,7 +18,6 @@ const goodsReducer = (goods: string[] = [], action: Action) => {
             return goods.filter(good => good !== action.payload);
         case 'goods/CLEAR':
             return [];
-
         default:
             return goods;
     }
